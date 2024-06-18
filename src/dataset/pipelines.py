@@ -78,9 +78,7 @@ def create_dataset(df: pl.DataFrame) -> List[Story]:
     dataset = []
     total_rows = len(df.rows())
 
-    for _, row in tqdm(
-        enumerate(df.rows()), desc="Creating dataset", total=total_rows
-    ):
+    for _, row in tqdm(enumerate(df.rows()), desc="Creating dataset", total=total_rows):
         title = row[0]
 
         # returns a tuple, convert to list
@@ -135,7 +133,7 @@ def pipeline() -> Dataset:
     df = drop_columns(df)
     dataset = create_dataset(df)
     dataset = convert_to_hf_dataset(dataset)
-    
+
     # push to hf hub
     hub_dataset_name = os.getenv("HF_HUB_DATASET_NAME")
     assert hub_dataset_name is not None, "HF_HUB_DATASET_NAME is not set"
