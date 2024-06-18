@@ -141,8 +141,3 @@ def pipeline() -> Dataset:
         hub_dataset_name, private=os.getenv("PRIVATE_DATASET") == "true"
     )
     return dataset
-
-
-if __name__ == "__main__":
-    dataset = pipeline()
-    logger.debug(dataset)
