@@ -10,6 +10,9 @@ authors = ["Shawon Ashraf"]
 license = "MIT"
 readme = "README.md"
 
+[tool.poetry.scripts]
+create-dataset = "dataset.pipelines:pipeline"
+
 [tool.poetry.dependencies]
 python = "^3.11"
 numpy = "^2.0.0"
