@@ -135,6 +135,13 @@ def pipeline() -> Dataset:
     df = drop_columns(df)
     dataset = create_dataset(df)
     dataset = convert_to_hf_dataset(dataset)
+    
+    # push to hf hub
+    hub_dataset_name = os.getenv("HF_HUB_DATASET_NAME")
+    assert hub_dataset_name is not None, "HF_HUB_DATASET_NAME is not set"
+    dataset.push_to_hub(
+        hub_dataset_name, private=os.getenv("PRIVATE_DATASET") == "true"
+    )
     return dataset
 
 
