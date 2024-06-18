@@ -21,6 +21,7 @@ polars = "^0.20.31"
 pydantic = "^2.7.4"
 datasets = "^2.20.0"
 python-dotenv = "^1.0.1"
+loguru = "^0.7.2"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.4.9"
