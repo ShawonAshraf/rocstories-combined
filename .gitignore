@@ -4,3 +4,6 @@ notebooks/
 __pycache__/
 .DS_Store
 .venv/
+*.ipynb_checkpoints/
+*.log
+*.ipynb
