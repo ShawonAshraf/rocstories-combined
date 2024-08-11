@@ -5,7 +5,7 @@ from datasets import load_dataset
 from fire import Fire
 from loguru import logger
 
-from eval.evaluate import evaluate
+from eval.utils import evaluate
 from eval.prediction import batch_predict
 
 
