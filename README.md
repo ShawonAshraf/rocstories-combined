@@ -1,12 +1,3 @@
-# llm-sentence-ordering
+# rocstories-combined
 
-## Usage
-
-```bash
-# clone the repository
-git clone https://github.com/ShawonAshraf/llm-sentence-ordering.git
-
-# install the poetry environment
-poetry shell
-poetry install
-```
+Repo for the HF dataset [rocstories-combined](https://huggingface.co/datasets/shawon/rocstories-combined).

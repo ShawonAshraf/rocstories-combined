@@ -12,7 +12,6 @@ readme = "README.md"
 
 [tool.poetry.scripts]
 create-dataset = "dataset.pipelines:pipeline"
-evaluate = "eval.evaluate:run"
 
 [tool.poetry.dependencies]
 python = "^3.11"
